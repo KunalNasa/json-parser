@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "types": [],
+    "esModuleInterop": true,
+    "skipLibCheck": true, // Avoids checking third-party type definitions
+    "resolveJsonModule": true, // For importing JSON files if needed
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": [
+    "./src/**/*.ts", // Include all TypeScript files in src
+    "./src/types/**/*.d.ts" // Include all type declarations
+  ],
+  "exclude": ["node_modules"] // Exclude frontend directory to avoid conflicts
+}
