@@ -3,13 +3,12 @@
 export function parser(node: any): any {
     switch (node.type) {
       case 'Program':
-        // Assuming single top-level element (object or array)
         return parser(node.body[0]);
   
       case 'ObjectExpression':
         const obj: Record<string, any> = {};
         for (const prop of node.properties) {
-          const key = prop.key.value; // STRING type
+          const key = prop.key.value; 
           const value = parser(prop.value);
           obj[key] = value;
         }

@@ -76,4 +76,37 @@ describe("Lexer", () => {
       { type: TOKEN_TYPES.NUMBER, value: '123' },
     ]);
   });
+  it("Test all types", () => {
+    const input = '{"name" : "kunal", "isAdult":true, "isFemale":false, "age":21, "techstack":["React", "Python","Javascript"]}'
+    const tokens = lexer(input);
+    expect(tokens).toEqual([
+      { type: TOKEN_TYPES.LEFT_BRACE },
+      { type: TOKEN_TYPES.STRING, value: 'name' },
+      { type: TOKEN_TYPES.COLON },
+      { type: TOKEN_TYPES.STRING, value: 'kunal' },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'isAdult' },
+      { type: TOKEN_TYPES.COLON },
+      { type: TOKEN_TYPES.TRUE },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'isFemale' },
+      { type: TOKEN_TYPES.COLON },
+      { type: TOKEN_TYPES.FALSE },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'age' },
+      { type: TOKEN_TYPES.COLON },
+      { type: TOKEN_TYPES.NUMBER, value: '21' },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'techstack' },
+      { type: TOKEN_TYPES.COLON },
+      { type: TOKEN_TYPES.LEFT_BRACKET },
+      { type: TOKEN_TYPES.STRING, value: 'React' },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'Python' },
+      { type: TOKEN_TYPES.COMMA },
+      { type: TOKEN_TYPES.STRING, value: 'Javascript' },
+      { type: TOKEN_TYPES.RIGHT_BRACKET },
+      { type: TOKEN_TYPES.RIGHT_BRACE },
+    ]);
+  })
 });
