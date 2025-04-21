@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build" : "tsc -b",
-    "test" : "node dist/index.js"
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,10 @@
   "description": "",
   "dependencies": {
     "tsx": "^4.19.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2"
   }
 }
