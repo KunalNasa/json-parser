@@ -104,7 +104,7 @@ export function lexer(input: string): Token[] {
             value += char;
             char = input[++current];
           }
-          tokens.push(createToken(TOKEN_TYPES.NUMBER, value));
+          tokens.push(createToken(TOKEN_TYPES.NUMBER, Number(value)));
           continue;
         }
 

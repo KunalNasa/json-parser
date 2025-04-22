@@ -32,7 +32,7 @@ describe("Lexer", () => {
     const tokens = lexer(input);
 
     expect(tokens).toEqual([
-      { type: TOKEN_TYPES.NUMBER, value: '123' },
+      { type: TOKEN_TYPES.NUMBER, value: 123 },
     ]);
   });
 
@@ -73,7 +73,7 @@ describe("Lexer", () => {
     const tokens = lexer(input);
 
     expect(tokens).toEqual([
-      { type: TOKEN_TYPES.NUMBER, value: '123' },
+      { type: TOKEN_TYPES.NUMBER, value: 123 },
     ]);
   });
   it("Test all types", () => {
@@ -95,7 +95,7 @@ describe("Lexer", () => {
       { type: TOKEN_TYPES.COMMA },
       { type: TOKEN_TYPES.STRING, value: 'age' },
       { type: TOKEN_TYPES.COLON },
-      { type: TOKEN_TYPES.NUMBER, value: '21' },
+      { type: TOKEN_TYPES.NUMBER, value: 21 },
       { type: TOKEN_TYPES.COMMA },
       { type: TOKEN_TYPES.STRING, value: 'techstack' },
       { type: TOKEN_TYPES.COLON },
